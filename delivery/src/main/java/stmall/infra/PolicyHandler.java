@@ -30,16 +30,6 @@ public class PolicyHandler {
         @Payload OrderPlaced orderPlaced
     ) {
         OrderPlaced event = orderPlaced;
-        System.out.println(
-            "\n\n##### listener StartDelivery : " + orderPlaced + "\n\n"
-        );
-
-        // Comments //
-        //notify to user
-        // send payload to CF
-        // save our repo.
-
-        // Sample Logic //
         Delivery.startDelivery(event);
     }
 
